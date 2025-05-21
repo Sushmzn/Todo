@@ -1,0 +1,32 @@
+<h2>My Todo List</h2>
+
+<input [(ngModel)]="newTodo" placeholder="Enter new task" class="todo-input" />
+<button (click)="addTodo()" class="add-btn">Add Todo</button>
+
+<table class="todo-table">
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let todo of todos" [class.completed]="todo.completed">
+      <td (click)="todo.completed = !todo.completed" class="task-cell">
+        {{ todo.title }}
+      </td>
+      <td class="status-cell">
+        {{ todo.completed ? 'Completed' : 'Pending' }}
+      </td>
+<td class="action-cell">
+  <button (click)="toggleDropdown(todo)" class="dots-btn" title="Options">⋮</button>
+
+  <div *ngIf="isDropdownOpen(todo)" class="dropdown-menu">
+    <button (click)="confirmDelete(todo)" class="dropdown-delete-btn">Delete</button>
+    <button (click)="Complete(todo)" class="dropdown-delete-btn">Complete</button>
+  </div>
+</td>
+    </tr>
+  </tbody>
+</table>

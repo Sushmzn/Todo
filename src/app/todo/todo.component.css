@@ -1,0 +1,113 @@
+.todo-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    width: 250px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .add-btn {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  .add-btn:hover {
+    background-color: #45a049;
+  }
+
+  /* Table styling */
+  .todo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .todo-table thead {
+    background-color: #0d498a;
+    color: white;
+  }
+  .todo-table th, .todo-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  .todo-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Completed task style */
+  .completed td.task-cell {
+    text-decoration: line-through;
+    color: gray;
+    cursor: pointer;
+  }
+
+  /* Task cell clickable */
+  .task-cell {
+    cursor: pointer;
+  }
+
+  /* Center status and action */
+  .status-cell, .action-cell {
+    text-align: center;
+    position: relative;
+  }
+
+  /* Delete button */
+  .delete-btn {
+    background-color: transparent;
+    border: none;
+    color: #ff4d4d;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  .delete-btn:hover {
+    color: #cc0000;
+  }
+  .dots-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+  color: #555;
+}
+
+.dots-btn:hover {
+  color: #000;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;       /* places dropdown right below the button */
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  z-index: 1000;
+  min-width: 120px;
+  margin-top: -15px; /* a little space below the button */
+}
+
+.dropdown-delete-btn {
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #d9534f; /* bootstrap danger red */
+  font-weight: bold;
+  text-align: left;
+}
+
+.dropdown-delete-btn:hover {
+  background-color: #f2dede;
+}
